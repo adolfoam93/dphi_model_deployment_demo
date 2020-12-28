@@ -62,7 +62,7 @@ def load_saved_artifacts():
     global __dependents, __self_employed, __property_area, __model
 
     # Cargamos datos desde el archivo json
-    with open("./server/artifacts/columns.json", "r") as f:
+    with open("columns.json", "r") as f:
         __data_columns = json.load(f)["data_columns"]
 
         # indices donde se encuentran los valores para "Gender"
@@ -84,7 +84,7 @@ def load_saved_artifacts():
         __property_area = __data_columns[17:]
 
     # cargamos modelo guardado en archivo pickle
-    with open("./server/artifacts/final_model.pickle", "rb") as f:
+    with open("final_model.pickle", "rb") as f:
         __model = pickle.load(f)
 
     print("Loading saved artifacts...done")
