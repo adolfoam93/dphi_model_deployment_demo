@@ -1,11 +1,7 @@
 # main imports
 import json
 import pickle
-import warnings
 import numpy as np
-
-# Ignoramos warnings
-warnings.filterwarnings('ignore')
 
 # Variables globales
 __data_columns = None
