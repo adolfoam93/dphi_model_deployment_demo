@@ -1,0 +1,1 @@
+{"data_columns": ["applicantincome", "coapplicantincome", "loanamount", "loan_amount_term", "credit_history", "female", "male", "graduate", "not graduate", "married_no", "married_yes", "0", "1", "2", "3+", "self_employed_no", "self_employed_yes", "rural", "semiurban", "urban"]}
