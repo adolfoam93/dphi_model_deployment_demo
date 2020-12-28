@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
 import util
+import os
 
 app = Flask(__name__)
 
@@ -44,4 +45,5 @@ def predict():
 if __name__ == "__main__":
     print("Starting Python Flask server")
     util.load_saved_artifacts()
-    app.run(debug=True)
+    port=int(os.environ.get('PORT',5000))
+    app.run(port=port,debug=True,use_reloader=False)

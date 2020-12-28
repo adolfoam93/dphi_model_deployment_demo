@@ -113,10 +113,10 @@ def get_property_area():
 
 if __name__ == "__main__":
     load_saved_artifacts()
-    print(get_genders())
-    print(get_education())
-    print(get_marital_status())
-    print(get_dependents())
-    print(get_self_employed())
-    print(get_property_area())
-    print(get_model_prediction(4500, 2000, 115, 360, 1.0, "Male", "Not Graduate", "Married_No", "0", "Self_Employed_No", "Semiurban"))
+    #print(get_genders())
+    #print(get_education())
+    #print(get_marital_status())
+    #print(get_dependents())
+    #print(get_self_employed())
+    #print(get_property_area())
+    #print(get_model_prediction(4500, 2000, 115, 360, 1.0, "Male", "Not Graduate", "Married_No", "0", "Self_Employed_No", "Semiurban"))
