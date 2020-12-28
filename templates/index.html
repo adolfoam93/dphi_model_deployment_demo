@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loan or no loan?</title>
+</head>
+
+<body>
+ <div class="login">
+    <h1>Predict Outcome</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+        <input type="text" name="ap_income" placeholder="Your income" required="required" />
+        <input type="text" name="coap_income" placeholder="Your coapplicant income" required="required" />
+        <input type="text" name="loan_amt" placeholder="Loan amount" required="required" />
+        <input type="text" name="loan_amt_term" placeholder="Loan amount term" required="required" />
+        <input type="text" name="credit_hist" placeholder="Credit history [0/1]" required="required" />
+        <input type="text" name="gender" placeholder="Male/Female" required="required" />
+        <br>
+        <br>
+        <input type="text" name="education" placeholder="Graduate/Not Graduate" required="required" />
+        <input type="text" name="married_status" placeholder="Married_Yes/Married_No" required="required" />
+        <input type="text" name="dependents" placeholder="Number of dependents [0, 1, 2, 3+]" required="required" />
+        <input type="text" name="self_employed" placeholder="Self_Employed_Yes/Self_Employed_No" required="required" />
+        <input type="text" name="property_area" placeholder="Property area [Urban, Semiurban, Rural]" required="required" />
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+<h2>Prediction:</h2>
+    {{ prediction_text }}
+
+ </div>
+</body>
+ </html>
