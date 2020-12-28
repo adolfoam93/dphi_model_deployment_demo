@@ -40,7 +40,7 @@ def predict():
 
     prediction = util.get_model_prediction(ap_income, coap_income, loan_amt, loan_amt_term, credit_hist, gender, education, married_status, dependents, self_employed, property_area)
 
-    return render_template('index.html', prediction_text=f"Loan: {prediction}")
+    return render_template('index.html', prediction_text='Your loan application is: {}'.format(prediction))
 
 if __name__ == "__main__":
     print("Starting Python Flask server")
