@@ -80,7 +80,7 @@ def load_saved_artifacts():
         __property_area = __data_columns[17:]
 
     # cargamos modelo guardado en archivo pickle
-    with open("final_model.pickle", "rb") as f:
+    with open("final_model.pkl", "rb") as f:
         __model = pickle.load(f)
 
     print("Loading saved artifacts...done")
