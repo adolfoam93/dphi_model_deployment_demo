@@ -4,7 +4,7 @@ import pickle
 import server.util
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
 
 @app.route("/")
 def home():
