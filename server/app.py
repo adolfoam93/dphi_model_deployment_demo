@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
-import util
+import server.util
 import os
 
 app = Flask(__name__)
