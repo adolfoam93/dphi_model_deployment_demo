@@ -60,6 +60,9 @@ def load_saved_artifacts():
     global __data_columns, __genders, __education, __marital_status
     global __dependents, __self_employed, __property_area, __model
 
+    path = os.path.dirname(os.path.abspath(__file__))
+    artifacts = os.path.join(path, "artifacts")
+
     # Cargamos datos desde el archivo json
     with open(artifacts + "/columns.json", "r") as f:
         __data_columns = json.load(f)["data_columns"]
