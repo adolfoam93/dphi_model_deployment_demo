@@ -6,22 +6,23 @@ import os
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
 
-@app.route("/")
+@app.route("/", methods = ['GET'])
 def home():
-    return render_template('index.html')
+    if request.method == 'GET':
+        return render_template('index.html')
 
-@app.route("/get_data")
-def get_data():
-    response = jsonify({
-        "genders": util.get_genders(),
-        "education": util.get_education(),
-        "marital_status": util.get_marital_status(),
-        "dependents": util.get_dependents(),
-        "self_employed": util.get_self_employed(),
-        "property_area": util.get_property_area()
-    })
-
-    return response
+#@app.route("/get_data")
+#def get_data():
+#    response = jsonify({
+#        "genders": util.get_genders(),
+#        "education": util.get_education(),
+#        "marital_status": util.get_marital_status(),
+#        "dependents": util.get_dependents(),
+#        "self_employed": util.get_self_employed(),
+#        "property_area": util.get_property_area()
+#   })
+#
+#    return response
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -44,6 +45,4 @@ def predict():
 
 if __name__ == "__main__":
     print("Starting Python Flask server")
-    util.load_saved_artifacts()
-    port=int(os.environ.get('PORT',5000))
-    app.run(port=port,debug=True,use_reloader=False)
+    app.run()
