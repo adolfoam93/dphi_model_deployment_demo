@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
-import server.util
+import server.util as util
 import os
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
